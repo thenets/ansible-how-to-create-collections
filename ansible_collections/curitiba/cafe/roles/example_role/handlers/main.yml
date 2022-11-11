@@ -1,0 +1,6 @@
+---
+# handlers file for example_role
+
+- name: restart_nginx
+  debug:
+    msg: "Restarting nginx"

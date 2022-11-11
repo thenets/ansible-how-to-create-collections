@@ -1,0 +1,16 @@
+---
+# tasks file for example_role
+
+- name: Debug hello
+  debug:
+    msg: "Hello {{ app_name }}"
+
+- name: Include tasks/setup.yml
+  include_tasks: setup.yml
+
+- name: Include tasks/deploy.yml
+  include_tasks: deploy.yml
+
+
+# playbook.yml -> role -> tasks -> main.yml -> deploy.yml
+#                                          |-> setup.yml

@@ -1,0 +1,13 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Include role "example_role"
+      vars:
+        app_name: coffee
+      include_role:
+        name: example_role
+        tasks_from: main

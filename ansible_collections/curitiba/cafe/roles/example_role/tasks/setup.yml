@@ -1,0 +1,5 @@
+---
+
+- name: Debug hello
+  debug:
+    msg: "Setting up {{ app_name }}"

@@ -1,0 +1,12 @@
+---
+
+- name: Debug hello
+  debug:
+    msg: "Deploying... {{ app_name }}"
+
+- name: Copy the app_name to the deploy.log
+  copy:
+    content: "{{ app_name }}"
+    dest: "{{ playbook_dir }}/deploy.log"
+    mode: 0644
+  notify: restart_nginx
